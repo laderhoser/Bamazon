@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'tattoo',
+    password: '',
     database: 'Bamazon_DB'
 })
 
@@ -97,8 +97,8 @@ function start() {
                         }
                         });
                     } else {
-                        console.log("Sorry, there is not enough in stock for your order");
-                        start();
+                        console.log("Sorry, there is not enough in stock for your order, TRY AGAIN.");
+                        showAll();
                     }
                 }
 
